@@ -1,0 +1,28 @@
+#spring:
+#  application:
+#    name: spring-boot-ci-cd-demo
+#  sql:
+#    init:
+#      mode: always
+#  datasource:
+#    driver-class-name: org.postgresql.Driver
+#    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5434}/${POSTGRES_DB:cicd_db}
+#    username: ${POSTGRES_USER:thoparamvishwateja}
+#    password: ${POSTGRES_PASSWORD:Vishwa@2002}
+#    hikari:
+#      auto-commit: false
+#  jpa:
+#    open-in-view: false
+#    hibernate:
+#      naming:
+#        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5434/cicd_db
+    username: thoparamvishwateja
+    password: Vishwa2133
+  jpa:
+    hibernate:
+      ddl-auto: update
+
