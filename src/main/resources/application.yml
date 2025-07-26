@@ -1,28 +1,42 @@
+spring:
+  application:
+    name: spring-boot-ci-cd-demo
+  sql:
+    init:
+      mode: always
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5434}/${POSTGRES_DB:cicd_db}
+    username: ${POSTGRES_USER:thoparamvishwateja}
+    password: ${POSTGRES_PASSWORD:Vishwa@2002}
+    hikari:
+      auto-commit: false
+  jpa:
+    open-in-view: false
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
 #spring:
-#  application:
-#    name: spring-boot-ci-cd-demo
-#  sql:
-#    init:
-#      mode: always
+#  datasource:
+#    url: jdbc:postgresql://localhost:5434/cicd_db
+#    username: thoparamvishwateja
+#    password:  Vishwa@2002
+
+#spring:
+#  datasource:
+#    url: jdbc:postgresql://db:5434/cicd_db
+#    username: thoparamvishwateja
+#    password: Vishwa@2002
+
+#spring:
 #  datasource:
 #    driver-class-name: org.postgresql.Driver
-#    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5434}/${POSTGRES_DB:cicd_db}
-#    username: ${POSTGRES_USER:thoparamvishwateja}
-#    password: ${POSTGRES_PASSWORD:Vishwa@2002}
-#    hikari:
-#      auto-commit: false
+#    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5434/mydatabase}
+#    username: ${SPRING_DATASOURCE_USERNAME:myuser}
+#    password: ${SPRING_DATASOURCE_PASSWORD:secret}
 #  jpa:
-#    open-in-view: false
 #    hibernate:
-#      naming:
-#        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+#      ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO:update}
 
-spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5434/cicd_db
-    username: thoparamvishwateja
-    password: Vishwa2133
-  jpa:
-    hibernate:
-      ddl-auto: update
 
