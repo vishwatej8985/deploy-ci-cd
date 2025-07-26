@@ -17,7 +17,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     services:
       postgres:
         image: postgres:13
@@ -51,5 +51,3 @@ jobs:
           POSTGRES_USER: myuser
           POSTGRES_PASSWORD: secret
         run: mvn -B package --file pom.xml
-
-
