@@ -10,7 +10,7 @@ public class DemoController {
 
     @GetMapping("/")
     public String demo() {
-        return "Hello, Render!";
+        return "Hello, Vishwateja!";
     }
 }
 
